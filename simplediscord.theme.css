@@ -1,11 +1,11 @@
 
 
 /* Now Playing Column */
-#app-mount .nowPlayingColumn-2sl4cE{
+.nowPlayingColumn-2sl4cE{
     display:none
 }
 /* Goodbye Nitro Tab */
-#app-mount #private-channels-1{
+#private-channels-1{
 display:none
 }
 
