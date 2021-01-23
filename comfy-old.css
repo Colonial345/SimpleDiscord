@@ -1,4 +1,7 @@
-/* --- 😀 PARTIE MP --- */
+* --- 😀 PARTIE MP --- */
+
+/* USRBG */
+@import url('https://discord-custom-covers.github.io/usrbg/dist/usrbg.css');
 
 /* Collone amis */
 .peopleColumn-29fq28 { background: var(--background-primary);}
@@ -131,8 +134,25 @@
 .gameIcon-gg34Dz { width: 40px !important; height: 40px !important; }
 
 /* Notification de mention */
-.unreadMentionsIndicatorBottom-BXS58x, .unreadMentionsIndicatorTop-gA6RCh { left: 3px;}
-.unreadMentionsIndicatorBottom-BXS58x { margin-bottom: -5px;}
+
+/* Top */
+.unreadMentionsIndicatorTop-gA6RCh { width: 100%; height: 50px; padding: 0; top: -7px;}
+.unreadMentionsIndicatorTop-gA6RCh > .unreadMentionsBar-1VrBNe { 
+    border-radius: 0; 
+    background: linear-gradient(#f04747, #0000);
+    transition: 0.3s;
+}
+.unreadMentionsIndicatorTop-gA6RCh > .unreadMentionsBar-1VrBNe:active { background: linear-gradient(#f04747, #0000);}
+
+/* Bottom */
+.unreadMentionsIndicatorBottom-BXS58x { width: 100%; height: 15px; padding: 0;}
+.unreadMentionsIndicatorBottom-BXS58x > .unreadMentionsBar-1VrBNe { 
+    border-radius: 0; 
+    background: linear-gradient(#0000, #f04747);
+}
+.unreadMentionsIndicatorBottom-BXS58x > .unreadMentionsBar-1VrBNe:active { background: linear-gradient(#0000, #f04747);}
+
+.unreadMentionsBar-1VrBNe > .text-2e2ZyG { display: none; }
 
 /* --- ✏️ PARTIE SALONS --- */
 
@@ -373,7 +393,7 @@
 .message-2qRu38 { background: var(--background-primary) !important; }
 
 /* Infobulles */
-.tooltip-2QfLtc { display: var(--tooltips); background: var(--background-tertiary) !important;}
+.tooltip-2QfLtc { display: var(--tooltips); background: var(--background-tertiary);}
 .theme-dark .tooltipBlack-PPG47z .tooltipPointer-3ZfirK { border-top-color: var(--background-tertiary);}
 
 /* Combo clavier */
@@ -385,3 +405,75 @@
 
 /* Activité de jeux et salon vocal */
 .activityPanel-28dQGo, .container-1giJp5 { border-bottom: none; }
+
+/* Commandes / */
+.categoryHeader-O1zU94 { background: var(--background-secondary) !important; }
+
+/* Popups */
+.root-1gCeng, .footer-2gL1pp, .modal-yWgWj- { box-shadow: none !important; }
+
+/* -- USRBG Small Popout -- */
+.reduce-motion .userPopout-3XzG_A {
+	transform:translateZ(0);
+}
+
+.userPopout-3XzG_A .wrapper-3t9DeA::after {
+	content: '';
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+    z-index: -1;
+    border-radius: 5px 5px 0 0;
+    pointer-events: none;
+    opacity: .8;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: var(--user-popout-position) center;
+	background-image: var(--user-background);
+    -webkit-mask-image: linear-gradient(#0009, #0000);
+    mask-image: linear-gradient(0.25turn, #0009, #0000);
+}
+
+.protip-YaFfgO { display: none;}
+.footer-1fjuF6 > .inputWrapper-31_8H8 > .inputDefault-_djjkz { border: none; background: #151B27;}
+
+.userPopout-3XzG_A  .header-2BwW8b,
+.userPopout-3XzG_A  .scroller-2FKFPG,
+.userPopout-3XzG_A  .footer-1fjuF6,
+.body-3iLsc4 {
+	z-index: 1;
+}
+
+/* -- USRBG Big Popout -- */
+:root {
+    --usrbg-modal-x-offset:-34px; /*Distance from the avatar container to the edge of the modal (x)*/
+    --usrbg-modal-y-offset:-20px; /*Distance from the avatar container to the edge of the modal (y)*/
+    --usrbg-modal-width:600px; /*Maximum width of modal*/
+    --usrbg-modal-height:600px; /*Maximum height of modal*/
+  }
+  .header-QKLPzZ .wrapper-3t9DeA::after {
+    content:'';
+    position:absolute;
+    top:var(--usrbg-modal-x-offset);
+    left:var(--usrbg-modal-y-offset);
+    width:var(--usrbg-modal-width);
+    height: var(--usrbg-modal-height);
+    opacity:.5;
+    pointer-events:none;
+    background: var(--user-background) center/cover no-repeat;
+    -webkit-mask: linear-gradient(black, transparent 90%);
+    mask: linear-gradient(#000, transparent);
+  }
+  
+  .headerInfo-30uryT,
+  .tabBarItem-1b8RUP,
+  .activity-1ythUs {
+    z-index:1;
+    position:relative;
+  }
+
+.topSectionNormal-2-vo2m *, .topSectionSpotify-1lI0-P *, .topSectionPlaying-1J5E4n *, .topSectionStreaming-1Tpf5X *, .body-3ND3kc{
+    z-index: 1;
+}
