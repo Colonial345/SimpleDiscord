@@ -34,10 +34,10 @@ button[aria-label="Open GIF picker"]{
 button[aria-label="Open sticker picker"]{
   display:var(--sticker-button)
 } 
-/* Add Friend to DM button, basically creates a group chat.  Seems a bit useless, when you can create a group chat from the friends menu */
+/* Add Friend to DM button, basically creates a group chat.  Seems a bit useless, when you can create a group chat from the friends menu 
 .iconWrapper-2OrFZ1.clickable-3rdHwn[aria-label="Add Friends to DM"]{
   display:var(--add-friend-to-dm)
-}
+}*/
 /* Button that redirects to help page */
 .iconWrapper-2OrFZ1.clickable-3rdHwn[aria-label="Help"]{
   display:var(--help)
